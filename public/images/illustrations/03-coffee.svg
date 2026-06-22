@@ -1,0 +1,52 @@
+<svg width="400" height="400" viewBox="0 0 400 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Coffee cup</title>
+<desc>Hand-drawn coffee cup with rising steam and saucer</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- saucer -->
+<path d="M100 308 Q102 298 200 296 Q298 298 300 308 Q302 322 200 326 Q98 322 100 308Z"
+      class="ink" stroke-width="2" fill="#e8d5b0" style="fill:#e8d5b0"/>
+<!-- saucer inner ring -->
+<path d="M148 308 Q150 304 200 303 Q250 304 252 308 Q252 314 200 315 Q148 314 148 308Z"
+      class="ink" stroke-width="1.2" fill="#d4bfa0" style="fill:#d4bfa0"/>
+
+<!-- cup body -->
+<path d="M128 200 Q124 248 118 280 Q116 294 200 298 Q284 294 282 280 Q276 248 272 200 Z"
+      class="ink" stroke-width="2.2" fill="#fff8f0" style="fill:#fff8f0"/>
+
+<!-- cup top ellipse -->
+<path d="M128 200 Q130 188 200 186 Q270 188 272 200 Q270 212 200 214 Q130 212 128 200Z"
+      class="ink" stroke-width="2" fill="#3b1f0a" style="fill:#3b1f0a"/>
+<!-- coffee surface shine -->
+<path d="M158 198 Q178 194 202 196" class="ink" stroke-width="1.2" style="stroke:#7a4010;opacity:0.6"/>
+
+<!-- handle -->
+<path d="M272 220 Q310 218 314 242 Q318 266 272 264"
+      class="ink" stroke-width="2.2"/>
+<path d="M272 220 Q302 220 306 242 Q310 264 272 264"
+      class="ink" stroke-width="1" style="stroke:#ccc"/>
+
+<!-- cup decoration line -->
+<path d="M132 238 Q160 234 200 235 Q240 234 268 238"
+      class="ink" stroke-width="1" style="stroke:#d4a870"/>
+<path d="M130 248 Q160 244 200 245 Q240 244 270 248"
+      class="ink" stroke-width="0.8" style="stroke:#d4a870"/>
+
+<!-- steam wisps -->
+<path d="M168 182 Q162 162 168 142 Q174 122 168 102"
+      class="ink" stroke-width="1.8" style="stroke:#aaa"/>
+<path d="M200 178 Q194 155 200 132 Q206 109 200 88"
+      class="ink" stroke-width="1.8" style="stroke:#aaa"/>
+<path d="M232 182 Q238 162 232 142 Q226 122 232 102"
+      class="ink" stroke-width="1.8" style="stroke:#aaa"/>
+
+<!-- small heart latte art on coffee surface -->
+<path d="M190 204 Q194 200 200 204 Q206 200 210 204 Q210 210 200 216 Q190 210 190 204Z"
+      class="ink" stroke-width="1" fill="#7a4010" style="fill:#7a4010;opacity:0.5"/>
+
+</svg>

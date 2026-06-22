@@ -1,0 +1,73 @@
+<svg width="400" height="420" viewBox="0 0 400 420" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Potted cactus</title>
+<desc>Hand-drawn potted cactus with spines and a tiny flower on top</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- pot -->
+<path d="M138 320 Q136 316 144 312 Q172 308 200 308 Q228 308 256 312 Q264 316 262 320 Q270 358 268 374 Q266 386 200 388 Q134 386 132 374 Q130 358 138 320Z"
+      class="ink" stroke-width="2.2" fill="#e8845a" style="fill:#e8845a"/>
+<!-- pot rim -->
+<path d="M134 320 Q136 312 200 310 Q264 312 266 320 Q264 330 200 332 Q136 330 134 320Z"
+      class="ink" stroke-width="1.8" fill="#f0a882" style="fill:#f0a882"/>
+<!-- pot shadow lines -->
+<path d="M148 340 Q146 365 148 378" class="ink" stroke-width="0.9" style="stroke:#c06030;opacity:0.5"/>
+<path d="M165 338 Q163 368 165 380" class="ink" stroke-width="0.9" style="stroke:#c06030;opacity:0.5"/>
+
+<!-- soil -->
+<path d="M148 318 Q150 314 200 313 Q250 314 252 318 Q252 326 200 328 Q148 326 148 318Z"
+      class="ink" stroke-width="1.2" fill="#6b4226" style="fill:#6b4226"/>
+
+<!-- main cactus trunk -->
+<path d="M178 314 Q174 260 176 200 Q176 148 178 100 Q180 72 200 68 Q220 72 222 100 Q224 148 224 200 Q226 260 222 314Z"
+      class="ink" stroke-width="2.2" fill="#5a9e50" style="fill:#5a9e50"/>
+
+<!-- left arm -->
+<path d="M178 220 Q148 218 136 210 Q122 196 124 176 Q126 158 140 156 Q154 154 158 166 Q160 176 178 178"
+      class="ink" stroke-width="2.2" fill="#5a9e50" style="fill:#5a9e50"/>
+
+<!-- right arm -->
+<path d="M222 240 Q252 238 264 228 Q278 214 276 192 Q274 172 260 170 Q246 168 244 180 Q242 192 222 194"
+      class="ink" stroke-width="2.2" fill="#5a9e50" style="fill:#5a9e50"/>
+
+<!-- cactus texture lines on trunk -->
+<path d="M186 280 Q188 260 186 240" class="ink" stroke-width="0.8" style="stroke:#3d7a34"/>
+<path d="M200 285 Q202 260 200 235" class="ink" stroke-width="0.8" style="stroke:#3d7a34"/>
+<path d="M214 280 Q212 260 214 240" class="ink" stroke-width="0.8" style="stroke:#3d7a34"/>
+<path d="M186 220 Q188 195 186 170" class="ink" stroke-width="0.8" style="stroke:#3d7a34"/>
+<path d="M200 225 Q202 195 200 165" class="ink" stroke-width="0.8" style="stroke:#3d7a34"/>
+<path d="M214 220 Q212 195 214 170" class="ink" stroke-width="0.8" style="stroke:#3d7a34"/>
+
+<!-- spines on trunk -->
+<line x1="176" y1="145" x2="162" y2="138" class="ink" stroke-width="1"/>
+<line x1="176" y1="155" x2="161" y2="152" class="ink" stroke-width="1"/>
+<line x1="224" y1="145" x2="238" y2="138" class="ink" stroke-width="1"/>
+<line x1="224" y1="155" x2="239" y2="152" class="ink" stroke-width="1"/>
+<line x1="176" y1="255" x2="161" y2="248" class="ink" stroke-width="1"/>
+<line x1="224" y1="255" x2="239" y2="248" class="ink" stroke-width="1"/>
+<line x1="176" y1="195" x2="161" y2="190" class="ink" stroke-width="1"/>
+<line x1="224" y1="200" x2="240" y2="194" class="ink" stroke-width="1"/>
+
+<!-- spines on left arm -->
+<line x1="140" y1="175" x2="132" y2="166" class="ink" stroke-width="1"/>
+<line x1="148" y1="168" x2="142" y2="158" class="ink" stroke-width="1"/>
+<line x1="140" y1="185" x2="130" y2="182" class="ink" stroke-width="1"/>
+
+<!-- spines on right arm -->
+<line x1="260" y1="188" x2="268" y2="178" class="ink" stroke-width="1"/>
+<line x1="252" y1="180" x2="258" y2="170" class="ink" stroke-width="1"/>
+<line x1="260" y1="198" x2="270" y2="196" class="ink" stroke-width="1"/>
+
+<!-- flower on top -->
+<circle cx="200" cy="60" r="10" class="ink" stroke-width="1.5" fill="#f06090" style="fill:#f06090"/>
+<path d="M200 50 Q196 42 192 44 Q188 48 192 54" class="ink" stroke-width="1.2" fill="#f06090" style="fill:#f9b4cc"/>
+<path d="M200 50 Q204 42 208 44 Q212 48 208 54" class="ink" stroke-width="1.2" fill="#f9b4cc" style="fill:#f9b4cc"/>
+<path d="M190 60 Q182 56 182 50 Q184 44 190 46" class="ink" stroke-width="1.2" fill="#f9b4cc" style="fill:#f9b4cc"/>
+<path d="M210 60 Q218 56 218 50 Q216 44 210 46" class="ink" stroke-width="1.2" fill="#f9b4cc" style="fill:#f9b4cc"/>
+<circle cx="200" cy="57" r="6" class="ink" stroke-width="1.2" fill="#f5c040" style="fill:#f5c040"/>
+
+</svg>

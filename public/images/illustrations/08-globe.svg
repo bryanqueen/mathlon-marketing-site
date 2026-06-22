@@ -1,0 +1,49 @@
+<svg width="400" height="400" viewBox="0 0 400 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Desk globe</title>
+<desc>Hand-drawn world globe on a small stand</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- stand base -->
+<path d="M150 332 Q200 326 250 332 Q252 340 200 344 Q148 340 150 332Z"
+      class="ink" stroke-width="2" fill="#8B5A2B" style="fill:#8B5A2B"/>
+<!-- stand stem -->
+<path d="M196 300 Q198 316 194 332 Q200 334 206 332 Q202 316 204 300Z"
+      class="ink" stroke-width="1.8" fill="#a06a32" style="fill:#a06a32"/>
+
+<!-- meridian arc holding the globe -->
+<path d="M120 176 Q104 200 110 246 Q190 300 290 246 Q296 200 280 176"
+      class="ink" stroke-width="2.4" style="stroke:#b8860b"/>
+
+<!-- globe sphere -->
+<circle cx="200" cy="174" r="98" class="ink" stroke-width="2.4" fill="#cfe8f5" style="fill:#cfe8f5"/>
+
+<!-- ocean shine -->
+<path d="M150 130 Q162 116 184 116" class="ink" stroke-width="1.4" style="stroke:#9fd4ec"/>
+
+<!-- latitude lines -->
+<path d="M108 150 Q200 138 292 150" class="ink" stroke-width="0.8" style="stroke:#8fc2dd"/>
+<path d="M104 174 Q200 164 296 174" class="ink" stroke-width="0.9" style="stroke:#8fc2dd"/>
+<path d="M108 200 Q200 212 292 200" class="ink" stroke-width="0.8" style="stroke:#8fc2dd"/>
+<!-- longitude line -->
+<path d="M200 76 Q188 174 200 272" class="ink" stroke-width="0.8" style="stroke:#8fc2dd"/>
+
+<!-- continents (green blobs) -->
+<path d="M150 138 Q172 130 188 144 Q196 160 180 172 Q160 178 148 164 Q142 150 150 138Z"
+      class="ink" stroke-width="1.6" fill="#7cc46a" style="fill:#7cc46a"/>
+<path d="M214 156 Q244 148 258 166 Q262 186 244 198 Q222 204 212 186 Q206 168 214 156Z"
+      class="ink" stroke-width="1.6" fill="#7cc46a" style="fill:#7cc46a"/>
+<path d="M176 206 Q196 200 206 214 Q208 228 194 234 Q178 236 172 222 Q170 212 176 206Z"
+      class="ink" stroke-width="1.6" fill="#7cc46a" style="fill:#7cc46a"/>
+
+<!-- top mount pin -->
+<circle cx="200" cy="76" r="5" class="ink" stroke-width="1.6" fill="#b8860b" style="fill:#b8860b"/>
+
+<!-- tiny sparkle -->
+<path d="M300 110 L303 102 L306 110 L314 113 L306 116 L303 124 L300 116 L292 113Z"
+      class="ink" stroke-width="0.9" fill="#f5c040" style="fill:#f5c040"/>
+</svg>

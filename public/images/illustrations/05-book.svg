@@ -1,0 +1,49 @@
+<svg width="400" height="360" viewBox="0 0 400 360" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Open book</title>
+<desc>Hand-drawn open book with pages and a small bookmark</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- left page block (under-stack) -->
+<path d="M52 196 Q50 192 70 188 Q140 176 198 200 Q200 250 198 286 Q140 262 70 274 Q52 278 52 196Z"
+      class="ink" stroke-width="2.2" fill="#f4ede0" style="fill:#f4ede0"/>
+<!-- right page block (under-stack) -->
+<path d="M348 196 Q350 192 330 188 Q260 176 202 200 Q200 250 202 286 Q260 262 330 274 Q348 278 348 196Z"
+      class="ink" stroke-width="2.2" fill="#f4ede0" style="fill:#f4ede0"/>
+
+<!-- left page top -->
+<path d="M58 182 Q56 178 76 174 Q142 162 198 186 Q200 188 198 200 Q142 176 76 188 Q58 192 58 182Z"
+      class="ink" stroke-width="2" fill="#fffaf0" style="fill:#fffaf0"/>
+<!-- right page top -->
+<path d="M342 182 Q344 178 324 174 Q258 162 202 186 Q200 188 202 200 Q258 176 324 188 Q342 192 342 182Z"
+      class="ink" stroke-width="2" fill="#fffaf0" style="fill:#fffaf0"/>
+
+<!-- spine / center fold -->
+<path d="M200 186 Q198 240 200 286" class="ink" stroke-width="1.6" style="stroke:#c8b89a"/>
+
+<!-- text lines left -->
+<path d="M78 200 Q118 192 168 202" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M76 214 Q118 206 170 216" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M76 228 Q116 221 162 230" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M76 242 Q116 235 168 244" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M78 256 Q114 250 150 257" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+
+<!-- text lines right -->
+<path d="M232 202 Q282 192 322 200" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M230 216 Q282 206 324 214" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M232 230 Q280 221 322 228" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M232 244 Q280 235 320 242" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+<path d="M236 258 Q278 250 312 256" class="ink" stroke-width="1" style="stroke:#b0a48c"/>
+
+<!-- bookmark ribbon -->
+<path d="M268 178 Q268 220 268 252 Q272 244 276 252 Q280 244 276 178Z"
+      class="ink" stroke-width="1.4" fill="#e84545" style="fill:#e84545"/>
+
+<!-- little sparkle of an idea above -->
+<path d="M200 150 L204 138 L208 150 L220 154 L208 158 L204 170 L200 158 L188 154Z"
+      class="ink" stroke-width="1" fill="#f5c040" style="fill:#f5c040"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg width="400" height="380" viewBox="0 0 400 380" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Stack of books</title>
+<desc>Hand-drawn stack of three books with a pencil resting on top</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- bottom book (teal) -->
+<path d="M80 290 Q78 286 88 284 Q200 274 314 286 Q322 288 320 292 Q322 318 320 322 Q200 332 86 322 Q78 320 80 290Z"
+      class="ink" stroke-width="2.2" fill="#5dcaa5" style="fill:#5dcaa5"/>
+<path d="M88 296 Q200 288 312 296" class="ink" stroke-width="1" style="stroke:#2c8a68"/>
+<!-- pages edge -->
+<path d="M84 308 Q200 300 318 308" class="ink" stroke-width="1" style="stroke:#eafaf3"/>
+
+<!-- middle book (coral) -->
+<path d="M96 250 Q94 246 104 244 Q200 234 300 246 Q308 248 306 252 Q308 276 306 280 Q200 290 102 280 Q94 278 96 250Z"
+      class="ink" stroke-width="2.2" fill="#e8845a" style="fill:#e8845a"/>
+<path d="M104 256 Q200 248 298 256" class="ink" stroke-width="1" style="stroke:#b35a32"/>
+<path d="M100 268 Q200 260 304 268" class="ink" stroke-width="1" style="stroke:#fceee6"/>
+
+<!-- top book (blue) -->
+<path d="M114 208 Q112 204 122 202 Q200 192 286 204 Q294 206 292 210 Q294 234 292 238 Q200 248 120 238 Q112 236 114 208Z"
+      class="ink" stroke-width="2.2" fill="#4a90d9" style="fill:#4a90d9"/>
+<path d="M122 214 Q200 206 284 214" class="ink" stroke-width="1" style="stroke:#2c6aa8"/>
+<path d="M118 226 Q200 218 288 226" class="ink" stroke-width="1" style="stroke:#e6f1fb"/>
+
+<!-- pencil resting on top -->
+<path d="M132 188 L268 168" class="ink" stroke-width="9" style="stroke:#f5c842"/>
+<path d="M132 188 L120 190 L126 180 Z" class="ink" stroke-width="1.4" fill="#e8b020" style="fill:#e8b020"/>
+<path d="M120 190 L114 191 L118 184Z" class="ink" stroke-width="1.2" fill="#3a3a3a" style="fill:#3a3a3a"/>
+<path d="M268 168 L282 166" class="ink" stroke-width="9" style="stroke:#e8845a"/>
+<path d="M282 166 L290 165" class="ink" stroke-width="9" style="stroke:#f4a9a9"/>
+
+<!-- little sparkle -->
+<path d="M312 150 L315 142 L318 150 L326 153 L318 156 L315 164 L312 156 L304 153Z"
+      class="ink" stroke-width="0.9" fill="#f5c040" style="fill:#f5c040"/>
+</svg>

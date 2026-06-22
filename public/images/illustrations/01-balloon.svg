@@ -1,0 +1,58 @@
+<svg width="400" height="420" viewBox="0 0 400 420" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Hot air balloon</title>
+<desc>Hand-drawn hot air balloon with ropes and basket</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- balloon body -->
+<path d="M200 48 Q272 44 308 100 Q340 150 338 210 Q336 268 296 300 Q256 328 200 330 Q144 328 104 300 Q64 268 62 210 Q60 150 92 100 Q128 44 200 48Z"
+      class="ink" stroke-width="2.2" fill="#f9e4b7" style="fill:#f9e4b7"/>
+
+<!-- vertical stripes on balloon -->
+<path d="M200 48 Q195 188 200 330" class="ink" stroke-width="1.2" style="stroke:#e07b39"/>
+<path d="M158 54 Q148 188 152 326" class="ink" stroke-width="1" style="stroke:#e07b39"/>
+<path d="M242 54 Q252 188 248 326" class="ink" stroke-width="1" style="stroke:#e07b39"/>
+<path d="M120 74 Q104 188 110 314" class="ink" stroke-width="0.9" style="stroke:#e07b39"/>
+<path d="M280 74 Q296 188 290 314" class="ink" stroke-width="0.9" style="stroke:#e07b39"/>
+
+<!-- horizontal band mid -->
+<path d="M66 195 Q130 178 200 180 Q270 178 334 195" class="ink" stroke-width="1.2" style="stroke:#c0392b"/>
+<path d="M62 215 Q130 200 200 202 Q270 200 338 215" class="ink" stroke-width="1.2" style="stroke:#c0392b"/>
+<!-- band fill -->
+<path d="M66 195 Q200 178 334 195 Q338 215 200 202 Q62 215 66 195Z"
+      style="fill:#f4a460;stroke:none;opacity:0.5"/>
+
+<!-- ropes from balloon to basket -->
+<path d="M152 326 Q162 352 170 368" class="ink" stroke-width="1.4"/>
+<path d="M248 326 Q238 352 230 368" class="ink" stroke-width="1.4"/>
+<path d="M180 330 Q182 352 182 368" class="ink" stroke-width="1.2"/>
+<path d="M220 330 Q218 352 218 368" class="ink" stroke-width="1.2"/>
+
+<!-- basket -->
+<path d="M164 368 Q166 364 236 366 Q238 368 236 396 Q234 400 166 398 Q162 396 164 368Z"
+      class="ink" stroke-width="2" fill="#c8a96e" style="fill:#c8a96e"/>
+<!-- basket weave lines -->
+<line x1="182" y1="366" x2="182" y2="398" class="ink" stroke-width="1"/>
+<line x1="200" y1="366" x2="200" y2="398" class="ink" stroke-width="1"/>
+<line x1="218" y1="366" x2="218" y2="398" class="ink" stroke-width="1"/>
+<line x1="164" y1="380" x2="236" y2="380" class="ink" stroke-width="1"/>
+
+<!-- little person peeking out -->
+<circle cx="192" cy="364" r="6" class="ink" stroke-width="1.4" fill="#f5cba7" style="fill:#f5cba7"/>
+<path d="M186 378 Q188 370 192 369 Q196 370 198 378" class="ink" stroke-width="1.2" fill="#3a6186" style="fill:#3a6186"/>
+
+<!-- small clouds -->
+<path d="M42 160 Q48 152 58 154 Q60 146 70 148 Q80 144 84 154 Q92 152 92 160 Q84 168 42 168 Q36 166 42 160Z"
+      class="ink" stroke-width="1.2" fill="#eaf4fb" style="fill:#eaf4fb"/>
+<path d="M298 80 Q304 72 314 74 Q316 66 326 68 Q336 64 340 74 Q348 72 348 80 Q340 88 298 88 Q292 86 298 80Z"
+      class="ink" stroke-width="1.2" fill="#eaf4fb" style="fill:#eaf4fb"/>
+
+<!-- tiny birds -->
+<path d="M60 100 Q65 96 70 100" class="ink" stroke-width="1.2"/>
+<path d="M76 90 Q81 86 86 90" class="ink" stroke-width="1.2"/>
+
+</svg>

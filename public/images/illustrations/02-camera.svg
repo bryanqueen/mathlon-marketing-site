@@ -1,0 +1,70 @@
+<svg width="400" height="360" viewBox="0 0 400 360" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Vintage camera</title>
+<desc>Hand-drawn vintage camera with lens, flash and strap</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: 'Patrick Hand','Caveat',cursive; fill: #1a1a2e; font-size: 13px; }
+  </style>
+</defs>
+
+<!-- camera strap -->
+<path d="M100 90 Q80 50 90 30 Q100 16 130 20 Q155 22 160 40"
+      class="ink" stroke-width="5" style="stroke:#8B6914"/>
+<path d="M100 90 Q80 50 90 30 Q100 16 130 20 Q155 22 160 40"
+      class="ink" stroke-width="3" style="stroke:#c8a040"/>
+<path d="M300 90 Q320 50 310 30 Q300 16 270 20 Q245 22 240 40"
+      class="ink" stroke-width="5" style="stroke:#8B6914"/>
+<path d="M300 90 Q320 50 310 30 Q300 16 270 20 Q245 22 240 40"
+      class="ink" stroke-width="3" style="stroke:#c8a040"/>
+
+<!-- camera body -->
+<path d="M72 88 Q74 84 328 86 Q332 88 330 272 Q328 276 72 274 Q68 272 72 88Z"
+      class="ink" stroke-width="2.4" fill="#2c2c2c" style="fill:#2c2c2c"/>
+
+<!-- top bump (viewfinder housing) -->
+<path d="M130 86 Q132 68 160 66 Q200 64 240 66 Q268 68 270 86"
+      class="ink" stroke-width="1.8" fill="#2c2c2c" style="fill:#2c2c2c"/>
+
+<!-- lens outer ring -->
+<circle cx="200" cy="182" r="72" class="ink" stroke-width="2" fill="#1a1a1a" style="fill:#1a1a1a"/>
+<!-- lens ring 2 -->
+<circle cx="200" cy="182" r="60" class="ink" stroke-width="1.5" fill="#222" style="fill:#222"/>
+<!-- lens ring 3 -->
+<circle cx="200" cy="182" r="46" class="ink" stroke-width="1.2" fill="#2980b9" style="fill:#2980b9;opacity:0.7"/>
+<!-- lens inner -->
+<circle cx="200" cy="182" r="30" class="ink" stroke-width="1.5" fill="#1a1a1a" style="fill:#1a1a1a"/>
+<!-- lens reflection -->
+<path d="M186 168 Q194 162 204 166" class="ink" stroke-width="1.2" style="stroke:#aaddff;opacity:0.8"/>
+<circle cx="208" cy="172" r="4" style="fill:#aaddff;stroke:none;opacity:0.4"/>
+
+<!-- shutter button -->
+<ellipse cx="268" cy="92" rx="12" ry="8" class="ink" stroke-width="1.5" fill="#e74c3c" style="fill:#e74c3c"/>
+
+<!-- viewfinder -->
+<rect x="134" y="70" width="34" height="22" rx="3" class="ink" stroke-width="1.4" fill="#3a3a3a" style="fill:#3a3a3a"/>
+<rect x="138" y="74" width="26" height="14" rx="2" class="ink" stroke-width="0.9" fill="#5dade2" style="fill:#5dade2;opacity:0.6"/>
+
+<!-- flash unit -->
+<rect x="290" y="72" width="28" height="18" rx="3" class="ink" stroke-width="1.4" fill="#f5c842" style="fill:#f5c842"/>
+<!-- flash lines -->
+<path d="M304 66 L300 72" class="ink" stroke-width="1.2"/>
+<path d="M310 64 L308 72" class="ink" stroke-width="1.2"/>
+<path d="M316 66 L314 72" class="ink" stroke-width="1.2"/>
+
+<!-- film advance wheel -->
+<circle cx="96" cy="92" r="12" class="ink" stroke-width="1.5" fill="#555" style="fill:#555"/>
+<line x1="96" y1="80" x2="96" y2="104" class="ink" stroke-width="1"/>
+<line x1="84" y1="92" x2="108" y2="92" class="ink" stroke-width="1"/>
+
+<!-- bottom grip texture -->
+<line x1="80" y1="255" x2="80" y2="268" class="ink" stroke-width="1.5"/>
+<line x1="90" y1="255" x2="90" y2="268" class="ink" stroke-width="1.5"/>
+<line x1="100" y1="255" x2="100" y2="268" class="ink" stroke-width="1.5"/>
+<line x1="110" y1="255" x2="110" y2="268" class="ink" stroke-width="1.5"/>
+<line x1="120" y1="255" x2="120" y2="268" class="ink" stroke-width="1.5"/>
+
+<!-- brand scrawl -->
+<text x="148" y="256" class="lbl" style="fill:#888;font-size:12px;font-family:'Patrick Hand',cursive">analog ♥</text>
+
+</svg>

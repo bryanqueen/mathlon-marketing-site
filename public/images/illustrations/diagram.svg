@@ -1,0 +1,46 @@
+<svg fill="none" viewBox="0 0 600 520" height="520" width="600" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect fill="#F0F7FA" height="520" width="600"></rect>
+
+  
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="380" x="120"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="22" font-family="system-ui, sans-serif" y="425" x="165">E=mc²</text>
+
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="380" x="220"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="22" font-family="system-ui, sans-serif" y="425" x="265">mc²</text>
+
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="380" x="320"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="22" font-family="system-ui, sans-serif" y="425" x="365">y=mx+b</text>
+
+  
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="290" x="140"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="18" font-family="system-ui, sans-serif" y="335" x="185">a²+b²=c²</text>
+
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="290" x="240"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="18" font-family="system-ui, sans-serif" y="335" x="285">a²+b²=c²</text>
+
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="290" x="340"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="16" font-family="system-ui, sans-serif" y="320" x="385">V=⅓bh</text>
+
+  
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="200" x="160"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="28" font-family="system-ui, sans-serif" y="245" x="205">∫</text>
+
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="200" x="260"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="26" font-family="system-ui, sans-serif" y="245" x="305">√x</text>
+
+  <rect stroke-width="7" stroke="#1F2A44" fill="#fff" rx="6" height="70" width="90" y="200" x="360"></rect>
+  <text text-anchor="middle" fill="#1F2A44" font-size="22" font-family="system-ui, sans-serif" y="245" x="405">x²</text>
+
+  
+  <path fill="#1F2A44" d="M480 180 L485 195 L500 195 L488 205 L493 220 L480 210 L467 220 L472 205 L460 195 L475 195 Z"></path>
+  <path fill="#1F2A44" d="M520 280 L524 292 L538 292 L527 300 L532 314 L520 305 L508 314 L513 300 L502 292 L516 292 Z"></path>
+  <path fill="#1F2A44" d="M95 350 L100 365 L115 365 L103 375 L108 390 L95 380 L82 390 L87 375 L75 365 L90 365 Z"></path>
+
+  
+  <path stroke-linecap="round" stroke-width="6" stroke="#1F2A44" d="M105 360 Q110 320 105 280"></path>
+  <path stroke-linecap="round" stroke-width="6" stroke="#1F2A44" d="M100 290 L105 275 L110 290"></path>
+  
+  <path stroke-linecap="round" stroke-width="6" stroke="#1F2A44" d="M485 360 Q490 320 485 280"></path>
+  <path stroke-linecap="round" stroke-width="6" stroke="#1F2A44" d="M480 290 L485 275 L490 290"></path>
+</svg>

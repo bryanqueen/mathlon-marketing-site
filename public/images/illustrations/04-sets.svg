@@ -1,0 +1,62 @@
+<svg width="400" height="400" viewBox="0 0 400 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Sets illustration</title>
+<desc>Hand-drawn Venn diagram showing two sets A and B with intersection and scattered elements</desc>
+<defs>
+  <style>
+    .ink { stroke: #1a1a2e; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .eq  { font-family: 'Patrick Hand', 'Caveat', cursive; fill: #1a1a2e; font-size: 13px; font-style: italic; }
+    .lbl { font-family: 'Patrick Hand', 'Caveat', cursive; fill: #1a1a2e; font-size: 15px; }
+  </style>
+</defs>
+
+<!-- Universe box, sketchy -->
+<path d="M38 60 Q40 58 362 60 Q364 62 363 340 Q361 342 38 341 Q36 339 38 60Z"
+      class="ink" stroke-width="1.6" style="stroke:#aaa"/>
+<text x="330" y="82" class="lbl" style="font-size:12px;fill:#aaa">𝒰</text>
+
+<!-- Set A circle -->
+<path d="M82 200 Q83 120 152 95 Q222 70 258 130 Q285 175 272 230 Q258 290 198 315 Q135 335 100 290 Q78 260 82 200Z"
+      class="ink" stroke-width="2" fill="#d6eaf8" style="fill:#d6eaf8;opacity:0.85"/>
+
+<!-- Set B circle -->
+<path d="M148 200 Q150 120 222 95 Q292 70 325 135 Q345 178 330 235 Q314 295 258 318 Q196 338 168 295 Q145 265 148 200Z"
+      class="ink" stroke-width="2" fill="#fde8d8" style="fill:#fde8d8;opacity:0.85"/>
+
+<!-- Intersection overlap redraw slightly darker -->
+<path d="M196 110 Q230 108 255 140 Q278 175 272 228 Q265 272 240 300 Q218 318 196 316 Q172 310 158 280 Q140 250 148 210 Q155 165 196 110Z"
+      style="fill:#d5c8f0;stroke:none;opacity:0.55" fill="#d5c8f0"/>
+
+<!-- A label -->
+<text x="105" y="175" class="lbl" style="fill:#2980b9;font-size:22px">A</text>
+
+<!-- B label -->
+<text x="286" y="175" class="lbl" style="fill:#e67e22;font-size:22px">B</text>
+
+<!-- A ∩ B label -->
+<text x="192" y="208" class="eq" style="fill:#8e44ad;font-size:12px">A ∩ B</text>
+
+<!-- elements in A only -->
+<text x="110" y="230" class="eq" style="font-size:13px">2</text>
+<text x="130" y="270" class="eq" style="font-size:13px">4</text>
+<text x="108" y="265" class="eq" style="font-size:13px">6</text>
+<text x="132" y="240" class="eq" style="font-size:11px;fill:#888">even</text>
+
+<!-- elements in B only -->
+<text x="282" y="230" class="eq" style="font-size:13px">3</text>
+<text x="300" y="265" class="eq" style="font-size:13px">9</text>
+<text x="275" y="270" class="eq" style="font-size:13px">15</text>
+<text x="272" y="240" class="eq" style="font-size:11px;fill:#888">odd ×3</text>
+
+<!-- elements in intersection -->
+<text x="192" y="240" class="eq" style="font-size:13px">6</text>
+<text x="205" y="265" class="eq" style="font-size:13px">12</text>
+
+<!-- formula below -->
+<text x="90" y="365" class="eq" style="font-size:13px">|A ∪ B| = |A| + |B| − |A ∩ B|</text>
+
+
+
+<!-- scrawl -->
+<text x="42" y="82" class="eq" style="font-size:11px;fill:#aaa">everything lives here</text>
+
+</svg>
