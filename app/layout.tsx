@@ -18,6 +18,21 @@ export const metadata: Metadata = {
   title: "Mathlon — Learn Math with an AI Tutor",
   description:
     "Bring the problem that's stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.",
+  openGraph: {
+    title: "Mathlon — Learn Math with an AI Tutor",
+    description:
+      "Bring the problem that's stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.",
+    url: "https://mathlon.com",
+    siteName: "Mathlon",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mathlon — Learn Math with an AI Tutor",
+    description:
+      "Bring the problem that's stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.",
+  },
 };
 
 export default function RootLayout({
