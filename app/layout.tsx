@@ -17,12 +17,12 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Mathlon — Learn Math with an AI Tutor",
   description:
-    "Bring the problem that's stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.",
+    "Bring a problem you're stuck on. Mathlon reasons through every step out loud and keeps going until it clicks.",
   openGraph: {
     title: "Mathlon — Learn Math with an AI Tutor",
     description:
-      "Bring the problem that's stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.",
-    url: "https://mathlon.com",
+      "Bring a problem you're stuck on. Mathlon reasons through every step out loud and keeps going until it clicks.",
+    url: "https://mathlon.app",
     siteName: "Mathlon",
     locale: "en_US",
     type: "website",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mathlon — Learn Math with an AI Tutor",
     description:
-      "Bring the problem that's stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.",
+      "Bring a problem you're stuck on. Mathlon reasons through every step out loud and keeps going until it clicks.",
   },
 };
 
