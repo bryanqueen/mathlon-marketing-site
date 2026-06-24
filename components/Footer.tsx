@@ -11,11 +11,6 @@ export function Footer() {
             <span className="footer-wordmark">mathlon</span>
           </Link>
           <p className="footer-tagline">A math tutor that works it out with you. Built for students who learn by doing.</p>
-          <div className="footer-social">
-            <span className="social-icon icon-twitter"></span>
-            <span className="social-icon icon-linkedin"></span>
-            <span className="social-icon icon-instagram"></span>
-          </div>
         </div>
         <div className="footer-columns">
           <div className="footer-col">
@@ -48,8 +43,8 @@ export function Footer() {
       <div className="footer-bottom">
         <div className="footer-copyright">&copy; 2026 Mathlon, Inc. All rights reserved.</div>
         <div className="footer-legal">
-          <a href="#">Privacy policy</a>
-          <a href="#">Terms of service</a>
+          <Link href="/privacy">Privacy policy</Link>
+          <Link href="/terms">Terms of service</Link>
         </div>
       </div>
     </footer>
