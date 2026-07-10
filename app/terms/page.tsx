@@ -50,7 +50,7 @@ const sections = [
   },
   {
     title: "9. Contact",
-    content: <p>Questions about these terms? Email us at <a href="mailto:hello@mathlon.com">hello@mathlon.com</a>.</p>,
+    content: <p>Questions about these terms? Email us at <a href="mailto:somtochukwu@mathlon.app">somtochukwu@mathlon.app</a>.</p>,
   },
 ];
 

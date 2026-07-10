@@ -17,7 +17,7 @@ export default function ContactPage() {
       </section>
 
       <div className="max-w-[560px] mx-auto px-10 pb-24 max-sm:px-6">
-        <form className="flex flex-col gap-5" action="mailto:hello@mathlon.com" method="post" encType="text/plain">
+        <form className="flex flex-col gap-5" action="mailto:somtochukwu@mathlon.app" method="post" encType="text/plain">
           {[
             { id: "name", label: "Name", type: "text", placeholder: "Your name" },
             { id: "email", label: "Email", type: "email", placeholder: "you@example.com" },
@@ -48,7 +48,7 @@ export default function ContactPage() {
         </form>
 
         <div className="mt-10 pt-7 border-t border-[rgba(45,45,45,0.12)] text-[15px] leading-6 text-[rgba(45,45,45,0.6)]">
-          Prefer email? Reach us directly at <a href="mailto:hello@mathlon.com" className="text-[#1e6bb8]">hello@mathlon.com</a>. We usually reply within a day or two.
+          Prefer email? Reach us directly at <a href="mailto:somtochukwu@mathlon.app" className="text-[#1e6bb8]">somtochukwu@mathlon.app</a>. We usually reply within a day or two.
         </div>
       </div>
 

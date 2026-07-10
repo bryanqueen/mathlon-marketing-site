@@ -76,7 +76,7 @@ export function Navbar() {
                   </svg>
                 </span>
                 <span className="nav-dropdown-label">Contact</span>
-                <span className="nav-dropdown-desc">hello@mathlon.com</span>
+                <span className="nav-dropdown-desc">somtochukwu@mathlon.app</span>
               </Link>
               <a href="#" className="nav-dropdown-item">
                 <span className="nav-dropdown-icon">

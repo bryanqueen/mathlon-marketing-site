@@ -39,7 +39,7 @@ const sections = [
   },
   {
     title: "4. Data retention",
-    content: <p>We retain your data for as long as your account is active or as needed to provide services. You can request deletion at any time by emailing <a href="mailto:hello@mathlon.com">hello@mathlon.com</a>.</p>,
+    content: <p>We retain your data for as long as your account is active or as needed to provide services. You can request deletion at any time by emailing <a href="mailto:somtochukwu@mathlon.app">somtochukwu@mathlon.app</a>.</p>,
   },
   {
     title: "5. Cookies",
@@ -59,7 +59,7 @@ const sections = [
   },
   {
     title: "9. Contact",
-    content: <p>Questions? Email us at <a href="mailto:hello@mathlon.com">hello@mathlon.com</a>.</p>,
+    content: <p>Questions? Email us at <a href="mailto:somtochukwu@mathlon.app">somtochukwu@mathlon.app</a>.</p>,
   },
 ];
 
