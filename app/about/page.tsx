@@ -62,7 +62,7 @@ export default function AboutPage() {
 
       <CtaSection
         heading="Come learn with us"
-        body="Mathlon is in early beta. Join now and help shape a tutor that finally teaches the way you need."
+        body="Try a free 5-minute demo first. Like it? Join Beta for $7/month — founding price, locked in for life while we're still building."
       />
 
       <Footer />

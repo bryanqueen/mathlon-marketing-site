@@ -90,14 +90,14 @@ export function Navbar() {
             </div>
           </div>
         </div>
-        <a href="https://tutor.mathlon.app" target="_blank" rel="noopener noreferrer" className="btn-accent">Join the Beta <span className="arrow-icon"></span></a>
+        <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent">Try the free demo <span className="arrow-icon"></span></a>
         <div className="nav-menu-art" aria-hidden>
           <p className="nav-menu-art-cap">Bring a problem. Let&apos;s work it out.</p>
         </div>
       </div>
 
       <div className="nav-right">
-        <a href="https://tutor.mathlon.app" target="_blank" rel="noopener noreferrer" className="btn-accent">Join the Beta <span className="arrow-icon"></span></a>
+        <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent">Try the free demo <span className="arrow-icon"></span></a>
         <label className="nav-toggle" htmlFor="nav-check" aria-label="Toggle navigation">
           <span></span>
           <span></span>

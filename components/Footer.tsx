@@ -33,7 +33,7 @@ export function Footer() {
           <div className="footer-col">
             <h5 className="footer-col-title">Get started</h5>
             <ul className="footer-col-links">
-              <li><a href="https://tutor.mathlon.app" target="_blank" rel="noopener noreferrer">Join the beta</a></li>
+              <li><a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer">Try the free demo</a></li>
               <li><Link href="/pricing">Pricing</Link></li>
               <li><Link href="/contact">Contact us</Link></li>
             </ul>
@@ -42,9 +42,25 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="footer-copyright">&copy; 2026 Mathlon, Inc. All rights reserved.</div>
-        <div className="footer-legal">
-          <Link href="/privacy">Privacy policy</Link>
-          <Link href="/terms">Terms of service</Link>
+        <div className="footer-bottom-right">
+          <a
+            href="https://elevenlabs.io/startup-grants"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-grant-badge"
+            aria-label="Backed by the ElevenLabs Startup Grant"
+          >
+            <img
+              src="https://eleven-public-cdn.elevenlabs.io/payloadcms/cy7rxce8uki-IIElevenLabsGrants%201.webp"
+              alt="ElevenLabs Grants"
+              width={140}
+              height={22}
+            />
+          </a>
+          <div className="footer-legal">
+            <Link href="/privacy">Privacy policy</Link>
+            <Link href="/terms">Terms of service</Link>
+          </div>
         </div>
       </div>
     </footer>

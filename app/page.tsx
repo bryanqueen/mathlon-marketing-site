@@ -8,11 +8,11 @@ import { FaqSection } from "@/components/FaqSection";
 const faqItems = [
   {
     q: "What is Mathlon?",
-    a: "A voice-first math tutor. You talk through a problem out loud, and Mathlon explains it back while drawing every step on a shared whiteboard — equations, graphs, diagrams, the lot. It's built to teach the way a good human tutor does, not to spit out a final answer and leave you to reverse-engineer it.",
+    a: "An audio-visual math tutor. You talk through a problem out loud, and Mathlon explains it back while drawing every step on a shared whiteboard — equations, graphs, diagrams, the lot. It's built to teach the way a good human tutor does, not to spit out a final answer and leave you to reverse-engineer it.",
   },
   {
     q: "Is it free to use?",
-    a: "During the beta, yes — your first lessons are free, no credit card needed. We're still figuring out long-term pricing, but it'll stay affordable for students. Beta users get a say in where it lands.",
+    a: "Try Mathlon free first — a short guided demo, no credit card, no signup. If it clicks for you, Beta access is $7/month, locked in for as long as you stay subscribed. That price won't be this low once we're out of beta.",
   },
   {
     q: "How does voice tutoring work?",
@@ -24,7 +24,7 @@ const faqItems = [
   },
   {
     q: "How do I get started?",
-    a: "Join the beta below, open Mathlon in your browser, and hold space to ask your first question. No install, no setup, no syllabus to pick from — just bring the problem that's been bugging you.",
+    a: "Try the free demo below — pick a topic, open Mathlon in your browser, and hold space to ask your first question. No install, no signup for the demo. If you like it, join Beta afterward to keep going.",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function Home() {
           <p className="hero-body">
             Bring the problem that&apos;s stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.
           </p>
-          <a href="https://tutor.mathlon.app" target="_blank" rel="noopener noreferrer" className="btn-accent">Join the Beta <span className="arrow-icon"></span></a>
+          <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent">Try the free demo <span className="arrow-icon"></span></a>
         </div>
       </section>
 
@@ -199,7 +199,7 @@ export default function Home() {
       {/* CTA */}
       <CtaSection
         heading={"Bring the problem<br/>that&apos;s been beating you"}
-        body="Join the beta and your first lesson is free. No credit card, no commitment — just you, a whiteboard, and a tutor that won't move on until it clicks."
+        body="Try a free guided demo — no credit card, no signup. Like it? Join Beta for $7/month, locked in for life while we're still building."
       />
 
       <Footer />

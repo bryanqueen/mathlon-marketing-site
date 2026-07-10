@@ -870,6 +870,10 @@ footer {
   font-size: 13px; line-height: 20px; font-weight: 400;
   color: rgba(245,241,232,0.5); letter-spacing: -0.2px;
 }
+.footer-bottom-right { display: flex; align-items: center; gap: 24px; }
+.footer-grant-badge { display: flex; align-items: center; opacity: 0.85; transition: opacity 0.15s ease; }
+.footer-grant-badge:hover { opacity: 1; }
+.footer-grant-badge img { display: block; height: 22px; width: auto; }
 .footer-legal { display: flex; gap: 24px; }
 .footer-legal a {
   font-size: 13px; line-height: 20px; font-weight: 400;
@@ -1085,6 +1089,7 @@ footer {
   .footer-main { flex-direction: column; gap: 48px; }
   .footer-columns { gap: 40px; }
   .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .footer-bottom-right { flex-direction: column; gap: 16px; }
 
   /* tablet: notebook pages drop to 2 per row */
   .notes-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }

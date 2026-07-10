@@ -17,8 +17,8 @@ export default function BlogPage() {
       </section>
 
       <div className="max-w-[620px] mx-auto px-10 pt-6 pb-[120px] text-center max-sm:px-6">
-        <a href="https://tutor.mathlon.app" target="_blank" rel="noopener noreferrer" className="btn-accent">
-          Join the Beta <span className="arrow-icon"></span>
+        <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent">
+          Try the free demo <span className="arrow-icon"></span>
         </a>
       </div>
 

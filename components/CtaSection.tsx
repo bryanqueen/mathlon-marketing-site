@@ -19,8 +19,8 @@ export function CtaSection({ heading, body }: CtaSectionProps) {
       <h2 className="cta-heading" dangerouslySetInnerHTML={{ __html: heading }} />
       <p className="cta-body">{body}</p>
       <div className="cta-actions">
-        <a href="https://tutor.mathlon.app" target="_blank" rel="noopener noreferrer" className="btn-accent btn-accent-light">
-          Join the Beta <span className="arrow-icon"></span>
+        <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent btn-accent-light">
+          Try the free demo <span className="arrow-icon"></span>
         </a>
       </div>
     </section>
