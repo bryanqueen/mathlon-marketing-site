@@ -1,4 +1,7 @@
-﻿import Image from "next/image";
+"use client";
+
+import Image from "next/image";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface CtaSectionProps {
   heading: string;
@@ -19,11 +22,16 @@ export function CtaSection({ heading, body }: CtaSectionProps) {
       <h2 className="cta-heading" dangerouslySetInnerHTML={{ __html: heading }} />
       <p className="cta-body">{body}</p>
       <div className="cta-actions">
-        <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent btn-accent-light">
+        <a
+          href="https://tutor.mathlon.app/?demo=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-accent btn-accent-light"
+          onClick={() => trackCtaClick("bottom")}
+        >
           Try the free demo <span className="arrow-icon"></span>
         </a>
       </div>
     </section>
   );
 }
-

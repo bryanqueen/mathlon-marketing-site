@@ -6,6 +6,7 @@ import { Logo } from "./Logo";
 
 export function Navbar() {
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,8 +24,17 @@ export function Navbar() {
     };
   }, [resourcesOpen]);
 
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 24);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav>
+    <nav className={scrolled ? "nav--scrolled" : undefined}>
       <Link href="/" className="nav-logo" aria-label="mathlon">
         <Logo className="nav-mark" />
         <span className="nav-wordmark">mathlon</span>
@@ -39,35 +49,16 @@ export function Navbar() {
         <div ref={dropdownRef} className={`nav-dropdown${resourcesOpen ? " nav-dropdown--open" : ""}`}>
           <a
             href="#"
-            onClick={(e) => { e.preventDefault(); setResourcesOpen(o => !o); }}
+            onClick={(e) => {
+              e.preventDefault();
+              setResourcesOpen((o) => !o);
+            }}
             aria-expanded={resourcesOpen}
           >
             Resources
           </a>
           <div className="nav-dropdown-menu">
-            <div className="nav-dropdown-grid">
-              <a href="#" className="nav-dropdown-item">
-                <span className="nav-dropdown-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
-                <span className="nav-dropdown-label">Help Center</span>
-                <span className="nav-dropdown-desc">Guides and troubleshooting</span>
-              </a>
-              <a href="#" className="nav-dropdown-item">
-                <span className="nav-dropdown-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="9" cy="7" r="4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </span>
-                <span className="nav-dropdown-label">Community</span>
-                <span className="nav-dropdown-desc">Join the conversation</span>
-              </a>
+            <div className="nav-dropdown-grid nav-dropdown-grid--live">
               <Link href="/contact" className="nav-dropdown-item">
                 <span className="nav-dropdown-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,15 +69,35 @@ export function Navbar() {
                 <span className="nav-dropdown-label">Contact</span>
                 <span className="nav-dropdown-desc">somtochukwu@mathlon.app</span>
               </Link>
-              <a href="#" className="nav-dropdown-item">
+              <Link href="/#faq" className="nav-dropdown-item" onClick={() => setResourcesOpen(false)}>
                 <span className="nav-dropdown-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 17h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </span>
-                <span className="nav-dropdown-label">What&apos;s New</span>
-                <span className="nav-dropdown-desc">Latest updates and features</span>
-              </a>
+                <span className="nav-dropdown-label">FAQ</span>
+                <span className="nav-dropdown-desc">Common questions answered</span>
+              </Link>
+              <Link href="/#how-it-works" className="nav-dropdown-item" onClick={() => setResourcesOpen(false)}>
+                <span className="nav-dropdown-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="5 3 19 12 5 21 5 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                <span className="nav-dropdown-label">How it works</span>
+                <span className="nav-dropdown-desc">See Mathlon in three steps</span>
+              </Link>
+              <Link href="/pricing" className="nav-dropdown-item" onClick={() => setResourcesOpen(false)}>
+                <span className="nav-dropdown-icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                <span className="nav-dropdown-label">Pricing</span>
+                <span className="nav-dropdown-desc">Free demo, then $7/month Beta</span>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Caveat } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
+
+const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || "";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,7 +47,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${caveat.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
+        {GA4_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_ID}', { send_page_view: false });
+`}
+            </Script>
+          </>
+        )}
+      </body>
     </html>
   );
 }

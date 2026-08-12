@@ -1,9 +1,13 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CtaSection } from "@/components/CtaSection";
 import { FaqSection } from "@/components/FaqSection";
+import { HowItWorks } from "@/components/HowItWorks";
+import { SocialProof } from "@/components/SocialProof";
+import { trackCtaClick } from "@/lib/analytics";
 
 const faqItems = [
   {
@@ -28,6 +32,44 @@ const faqItems = [
   },
 ];
 
+const features = [
+  {
+    title: "Built to teach, not just answer",
+    body: "Walks the logic with you step by step — so you leave understanding, not guessing.",
+    caption: "∫ walks the logic with you",
+    illo: "/images/illustrations/05-book.svg",
+    rot: "-2.2deg",
+  },
+  {
+    title: "Find anything, instantly",
+    body: "Jump back to last week’s parabola or that stuck integral without digging through notes.",
+    caption: '"last week\'s parabola" →',
+    illo: "/images/illustrations/02-camera.svg",
+    rot: "1.8deg",
+  },
+  {
+    title: "Follows your curiosity",
+    body: "Ask “but why?” as many times as you need. It stays until the idea actually sticks.",
+    caption: "but why? × 10",
+    illo: "/images/illustrations/06-lightbulb.svg",
+    rot: "-1.5deg",
+  },
+  {
+    title: "Fast enough to feel real",
+    body: "Replies in under half a second so the conversation stays natural — not stop-start.",
+    caption: "< 0.5s to respond",
+    illo: "/images/illustrations/03-coffee.svg",
+    rot: "2.4deg",
+  },
+  {
+    title: "Your work stays with you",
+    body: "Pick up mid-proof tomorrow. Sessions and whiteboard history don’t disappear.",
+    caption: "pick up mid-proof ✓",
+    illo: "/images/illustrations/03-algebra.svg",
+    rot: "-2deg",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -37,18 +79,18 @@ export default function Home() {
       <section className="section-hero">
         <div className="hero-grid" aria-hidden></div>
         {/* top zone */}
-        <span className="hero-eq hero-eq--keep" style={{top:"4%",  left:"18%", transform:"rotate(-8deg)"} as React.CSSProperties} aria-hidden>∫₀¹ x² dx = ⅓</span>
-        <span className="hero-eq hero-eq--desktop" style={{top:"5%",  right:"18%",transform:"rotate(-5deg)"} as React.CSSProperties} aria-hidden>x² + y² = r²</span>
+        <span className="hero-eq hero-eq--keep hero-eq--drift" style={{ top: "4%", left: "18%", ["--eq-rot" as string]: "-8deg" } as React.CSSProperties} aria-hidden>∫₀¹ x² dx = ⅓</span>
+        <span className="hero-eq hero-eq--desktop hero-eq--drift" style={{ top: "5%", right: "18%", ["--eq-rot" as string]: "-5deg", ["--eq-delay" as string]: "1.2s" } as React.CSSProperties} aria-hidden>x² + y² = r²</span>
         {/* left side */}
-        <span className="hero-eq hero-eq--desktop" style={{top:"30%", left:"3%",  transform:"rotate(5deg)"} as React.CSSProperties} aria-hidden>y = mx + b</span>
-        <span className="hero-eq hero-eq--desktop" style={{top:"50%", left:"7%",  transform:"rotate(-3deg)"} as React.CSSProperties} aria-hidden>sin²θ + cos²θ = 1</span>
+        <span className="hero-eq hero-eq--desktop hero-eq--drift" style={{ top: "30%", left: "3%", ["--eq-rot" as string]: "5deg", ["--eq-delay" as string]: "0.4s" } as React.CSSProperties} aria-hidden>y = mx + b</span>
+        <span className="hero-eq hero-eq--desktop hero-eq--drift" style={{ top: "50%", left: "7%", ["--eq-rot" as string]: "-3deg", ["--eq-delay" as string]: "2s" } as React.CSSProperties} aria-hidden>sin²θ + cos²θ = 1</span>
         {/* right side */}
-        <span className="hero-eq hero-eq--desktop" style={{top:"32%", right:"5%", transform:"rotate(9deg)"} as React.CSSProperties} aria-hidden>P(A∩B) = P(A)·P(B)</span>
-        {/* lower band — pulled up so it stays in view */}
-        <span className="hero-eq hero-eq--desktop" style={{top:"70%", left:"22%", transform:"rotate(6deg)"} as React.CSSProperties} aria-hidden>∑ 1/n² = π²/6</span>
-        <span className="hero-eq hero-eq--keep hero-eq--keep-br" style={{top:"70%", right:"16%",transform:"rotate(8deg)"} as React.CSSProperties} aria-hidden>d/dx [xⁿ] = nxⁿ⁻¹</span>
+        <span className="hero-eq hero-eq--desktop hero-eq--drift" style={{ top: "32%", right: "5%", ["--eq-rot" as string]: "9deg", ["--eq-delay" as string]: "0.8s" } as React.CSSProperties} aria-hidden>P(A∩B) = P(A)·P(B)</span>
+        {/* lower band */}
+        <span className="hero-eq hero-eq--desktop hero-eq--drift" style={{ top: "70%", left: "22%", ["--eq-rot" as string]: "6deg", ["--eq-delay" as string]: "1.6s" } as React.CSSProperties} aria-hidden>∑ 1/n² = π²/6</span>
+        <span className="hero-eq hero-eq--keep hero-eq--keep-br hero-eq--drift" style={{ top: "70%", right: "16%", ["--eq-rot" as string]: "8deg", ["--eq-delay" as string]: "2.4s" } as React.CSSProperties} aria-hidden>d/dx [xⁿ] = nxⁿ⁻¹</span>
         {/* parabola — top right area */}
-        <svg className="hero-eq-svg hero-eq--desktop" style={{top:"10%",right:"6%",transform:"rotate(6deg)"} as React.CSSProperties} width="100" height="80" viewBox="0 0 100 80" aria-hidden>
+        <svg className="hero-eq-svg hero-eq--desktop hero-eq--drift" style={{ top: "10%", right: "6%", ["--eq-rot" as string]: "6deg", ["--eq-delay" as string]: "0.6s" } as React.CSSProperties} width="100" height="80" viewBox="0 0 100 80" aria-hidden>
           <path d="M5,70 Q50,5 95,70" fill="none" stroke="#030213" strokeWidth="1.6" strokeLinecap="round"/>
           <line x1="5" y1="72" x2="95" y2="72" stroke="#030213" strokeWidth="1"/>
           <line x1="50" y1="75" x2="50" y2="4" stroke="#030213" strokeWidth="1"/>
@@ -56,7 +98,7 @@ export default function Home() {
           <text x="54" y="12" fontSize="11" fill="#030213" className="hero-eq-label">y</text>
         </svg>
         {/* triangle — lower left */}
-        <svg className="hero-eq-svg hero-eq--desktop" style={{top:"70%",left:"8%",transform:"rotate(-9deg)"} as React.CSSProperties} width="80" height="70" viewBox="0 0 80 70" aria-hidden>
+        <svg className="hero-eq-svg hero-eq--desktop hero-eq--drift" style={{ top: "70%", left: "8%", ["--eq-rot" as string]: "-9deg", ["--eq-delay" as string]: "1.8s" } as React.CSSProperties} width="80" height="70" viewBox="0 0 80 70" aria-hidden>
           <polygon points="4,60 40,6 76,60" fill="none" stroke="#030213" strokeWidth="1.6"/>
           <text x="40" y="74" fontSize="10" fill="#030213" textAnchor="middle" className="hero-eq-label">a²+b²=c²</text>
         </svg>
@@ -76,61 +118,20 @@ export default function Home() {
           <p className="hero-body">
             Bring the problem that&apos;s stuck you. Mathlon reasons through every step out loud, shows the calculation as it goes, and keeps going until it clicks.
           </p>
-          <a href="https://tutor.mathlon.app/?demo=true" target="_blank" rel="noopener noreferrer" className="btn-accent">Try the free demo <span className="arrow-icon"></span></a>
+          <a
+            href="https://tutor.mathlon.app/?demo=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-accent hero-cta"
+            onClick={() => trackCtaClick("hero")}
+          >
+            Try the free demo <span className="arrow-icon"></span>
+          </a>
+          <p className="hero-meta">No signup · No card · ~5 minutes</p>
         </div>
       </section>
 
-      {/* How It Works — Zig-Zag */}
-      <section className="section" id="how-it-works">
-        <div className="zigzag">
-
-          <div className="zigzag-row">
-            <Image className="zigzag-deco zigzag-deco-right" src="/images/illustrations/08-globe.svg" alt="" width={96} height={96} aria-hidden />
-            <div className="zigzag-visual">
-              <div className="visual-stage" style={{backgroundImage:"url('/images/bg1.jpg')"}}>
-                <video className="visual-video" autoPlay muted loop playsInline>
-                  <source src="/videos/speak-your-problem.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-            <div className="zigzag-content">
-              <h2 className="section-heading">Speak your problem</h2>
-              <p className="section-body">Hold space and just talk — &quot;why does the chain rule work?&quot; Snap a photo of the question that stumped you. No typing equations like a robot, no perfect phrasing required.</p>
-            </div>
-          </div>
-
-          <div className="zigzag-row reverse">
-            <Image className="zigzag-deco zigzag-deco-left" src="/images/illustrations/07-books-stack.svg" alt="" width={96} height={96} aria-hidden />
-            <div className="zigzag-visual">
-              <div className="visual-stage" style={{backgroundImage:"url('/images/bg4.jpg')"}}>
-                <video className="visual-video" autoPlay muted loop playsInline>
-                  <source src="/videos/watch-it-draw.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-            <div className="zigzag-content">
-              <h2 className="section-heading">Watch it draw</h2>
-              <p className="section-body">As the tutor talks, the whiteboard fills in — equations line by line, a parabola taking shape, a triangle labelled as it&apos;s mentioned. You&apos;re not reading a wall of text. You&apos;re watching someone think it through with you.</p>
-            </div>
-          </div>
-
-          <div className="zigzag-row">
-            <Image className="zigzag-deco zigzag-deco-right" src="/images/illustrations/04-cactus.svg" alt="" width={96} height={96} aria-hidden />
-            <div className="zigzag-visual">
-              <div className="visual-stage" style={{backgroundImage:"url('/images/bg3.jpg')"}}>
-                <video className="visual-video" autoPlay muted loop playsInline>
-                  <source src="/videos/interrupt-freely.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-            <div className="zigzag-content">
-              <h2 className="section-heading">Interrupt freely</h2>
-              <p className="section-body">Lost at step three? Cut in mid-sentence — &quot;wait, where did that come from?&quot; The tutor stops, scrolls back to that exact step, and explains it a different way before moving on. Just like a real one would.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
+      <HowItWorks />
 
       {/* Features — Notebook Spreads (desktop) / Tilt-stack (mobile) */}
       <section className="section-notes" id="features">
@@ -139,64 +140,34 @@ export default function Home() {
           <p className="section-body">Not a calculator. Not a search box. A thinking partner that stays until you get there.</p>
         </div>
         <div className="notes-grid">
-
-          <article className="note-card" style={{"--note-i":0,"--note-rot":"-2.2deg"} as React.CSSProperties}>
-            <div className="note-visual">
-              <Image className="card-visual-img" src="/images/illustrations/05-book.svg" alt="" width={200} height={200} aria-hidden />
-            </div>
-            <div className="note-content">
-              <h4 className="feature-card-title">Built to teach, not just answer</h4>
-              <p className="note-caption">∫ walks the logic with you</p>
-            </div>
-          </article>
-
-          <article className="note-card" style={{"--note-i":1,"--note-rot":"1.8deg"} as React.CSSProperties}>
-            <div className="note-visual">
-              <Image className="card-visual-img" src="/images/illustrations/02-camera.svg" alt="" width={200} height={200} aria-hidden />
-            </div>
-            <div className="note-content">
-              <h4 className="feature-card-title">Find anything, instantly</h4>
-              <p className="note-caption">&quot;last week&apos;s parabola&quot; →</p>
-            </div>
-          </article>
-
-          <article className="note-card" style={{"--note-i":2,"--note-rot":"-1.5deg"} as React.CSSProperties}>
-            <div className="note-visual">
-              <Image className="card-visual-img" src="/images/illustrations/06-lightbulb.svg" alt="" width={200} height={200} aria-hidden />
-            </div>
-            <div className="note-content">
-              <h4 className="feature-card-title">Follows your curiosity</h4>
-              <p className="note-caption">but why? × 10</p>
-            </div>
-          </article>
-
-          <article className="note-card" style={{"--note-i":3,"--note-rot":"2.4deg"} as React.CSSProperties}>
-            <div className="note-visual">
-              <Image className="card-visual-img" src="/images/illustrations/03-coffee.svg" alt="" width={200} height={200} aria-hidden />
-            </div>
-            <div className="note-content">
-              <h4 className="feature-card-title">Fast enough to feel real</h4>
-              <p className="note-caption">&lt; 0.5s to respond</p>
-            </div>
-          </article>
-
-          <article className="note-card" style={{"--note-i":4,"--note-rot":"-2deg"} as React.CSSProperties}>
-            <div className="note-visual">
-              <Image className="card-visual-img" src="/images/illustrations/03-algebra.svg" alt="" width={200} height={200} aria-hidden />
-            </div>
-            <div className="note-content">
-              <h4 className="feature-card-title">Your work stays with you</h4>
-              <p className="note-caption">pick up mid-proof ✓</p>
-            </div>
-          </article>
-
+          {features.map((f, i) => (
+            <article
+              key={f.title}
+              className="note-card"
+              style={
+                {
+                  "--note-i": i,
+                  "--note-rot": f.rot,
+                } as React.CSSProperties
+              }
+            >
+              <div className="note-visual">
+                <Image className="card-visual-img" src={f.illo} alt="" width={200} height={200} aria-hidden />
+              </div>
+              <div className="note-content">
+                <h4 className="feature-card-title">{f.title}</h4>
+                <p className="note-body">{f.body}</p>
+                <p className="note-caption">{f.caption}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
-      {/* FAQ */}
+      <SocialProof />
+
       <FaqSection items={faqItems} />
 
-      {/* CTA */}
       <CtaSection
         heading={"Bring the problem<br/>that&apos;s been beating you"}
         body="Try a free guided demo — no credit card, no signup. Like it? Join Beta for $7/month, locked in for life while we're still building."
