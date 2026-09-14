@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "./Logo";
+import { LogoLockup } from "./Logo";
 
 export function Footer() {
   return (
@@ -7,8 +7,7 @@ export function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link href="/" className="footer-logo" aria-label="mathlon">
-            <Logo className="footer-mark" />
-            <span className="footer-wordmark">mathlon</span>
+            <LogoLockup size={26} className="footer-logo-lockup" />
           </Link>
           <p className="footer-tagline">A math tutor that works it out with you. Built for students who learn by doing.</p>
         </div>

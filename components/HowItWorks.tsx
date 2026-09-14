@@ -53,31 +53,78 @@ const steps = [
   },
 ];
 
+/**
+ * Observes an element and reports whether it's near/in the viewport.
+ * `rootMargin` lets a video start loading/playing slightly before it's
+ * actually visible, so there's no pop-in when it scrolls into place.
+ */
+function useNearViewport<T extends Element>(rootMargin = "400px 0px") {
+  const ref = useRef<T>(null);
+  // Lazy initializer, not an effect: environments without IntersectionObserver
+  // (very old browsers/SSR) just start "in view" rather than staying hidden.
+  const [inView, setInView] = useState(
+    () => typeof IntersectionObserver === "undefined"
+  );
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [rootMargin]);
+
+  return { ref, inView };
+}
+
 function DemoStage({
   video,
   backdrop,
   blurDataURL,
   priority,
+  active,
 }: {
   video: string;
   backdrop: string;
   blurDataURL: string;
   priority?: boolean;
+  active: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [ready, setReady] = useState(false);
+  // Once a step has scrolled near the viewport we mount its <source> and
+  // keep it mounted — this way we only ever download each ~2-6MB clip once,
+  // instead of re-fetching every time it scrolls back into view. Derived
+  // during render (not in an effect) per React's "adjusting state" pattern:
+  // https://react.dev/learn/you-might-not-need-an-effect
+  const [loaded, setLoaded] = useState(Boolean(priority));
+  const [prevActive, setPrevActive] = useState(active);
+  if (active !== prevActive) {
+    setPrevActive(active);
+    if (active) setLoaded(true);
+  }
 
+  // Play while the step is near the viewport, pause (and stop decoding)
+  // once it scrolls away — three simultaneous always-on videos were the
+  // biggest single cost on this page.
   useEffect(() => {
     const v = videoRef.current;
-    if (!v) return;
-    v.muted = true;
-    const play = () => {
-      const p = v.play();
-      if (p) p.catch(() => {});
-    };
-    if (v.readyState >= 2) play();
-    else v.addEventListener("loadeddata", play, { once: true });
-  }, []);
+    if (!v || !loaded) return;
+    if (active) {
+      v.muted = true;
+      const play = () => {
+        const p = v.play();
+        if (p) p.catch(() => {});
+      };
+      if (v.readyState >= 2) play();
+      else v.addEventListener("loadeddata", play, { once: true });
+    } else {
+      v.pause();
+    }
+  }, [active, loaded]);
 
   return (
     <div className="visual-stage">
@@ -100,20 +147,57 @@ function DemoStage({
           muted
           loop
           playsInline
-          autoPlay
-          preload="auto"
+          preload={loaded ? "auto" : "none"}
           onCanPlay={() => setReady(true)}
           onLoadedData={() => setReady(true)}
           onPlaying={() => setReady(true)}
         >
-          <source src={video} type="video/mp4" />
+          {loaded && <source src={video} type="video/mp4" />}
         </video>
       </div>
     </div>
   );
 }
 
-/** Static video-led zigzag — all demos autoplay; no in-view gating. */
+type Step = (typeof steps)[number];
+
+function HowItWorksRow({ step, index }: { step: Step; index: number }) {
+  const { ref, inView } = useNearViewport<HTMLElement>();
+  return (
+    <article
+      ref={ref}
+      className={`how-zig-row${step.reverse ? " is-reverse" : ""}`}
+      data-step={index + 1}
+    >
+      <Image
+        className={`zigzag-deco zigzag-deco-${step.decoPos}`}
+        src={step.decoSrc}
+        alt=""
+        width={96}
+        height={96}
+        aria-hidden
+      />
+      <div className="how-zig-visual">
+        <DemoStage
+          video={step.video}
+          backdrop={step.backdrop}
+          blurDataURL={step.blurDataURL}
+          priority={index === 0}
+          active={inView}
+        />
+      </div>
+
+      <div className="how-zig-copy">
+        <div className="how-zig-plate">
+          <h3 className="how-zig-title">{step.title}</h3>
+          <p className="how-zig-body">{renderBody(step.body)}</p>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+/** Video-led zigzag — each demo only loads/plays once its row is near the viewport. */
 export function HowItWorks() {
   return (
     <section className="section how-zig" id="how-it-works">
@@ -127,35 +211,7 @@ export function HowItWorks() {
       <div className="how-zig-body">
         <div className="how-zig-rows">
           {steps.map((step, i) => (
-            <article
-              key={step.title}
-              className={`how-zig-row${step.reverse ? " is-reverse" : ""}`}
-              data-step={i + 1}
-            >
-              <Image
-                className={`zigzag-deco zigzag-deco-${step.decoPos}`}
-                src={step.decoSrc}
-                alt=""
-                width={96}
-                height={96}
-                aria-hidden
-              />
-              <div className="how-zig-visual">
-                <DemoStage
-                  video={step.video}
-                  backdrop={step.backdrop}
-                  blurDataURL={step.blurDataURL}
-                  priority={i === 0}
-                />
-              </div>
-
-              <div className="how-zig-copy">
-                <div className="how-zig-plate">
-                  <h3 className="how-zig-title">{step.title}</h3>
-                  <p className="how-zig-body">{renderBody(step.body)}</p>
-                </div>
-              </div>
-            </article>
+            <HowItWorksRow key={step.title} step={step} index={i} />
           ))}
         </div>
       </div>

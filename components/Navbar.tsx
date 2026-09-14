@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { Logo } from "./Logo";
+import { LogoLockup } from "./Logo";
 
 export function Navbar() {
   const [resourcesOpen, setResourcesOpen] = useState(false);
@@ -36,8 +36,7 @@ export function Navbar() {
   return (
     <nav className={scrolled ? "nav--scrolled" : undefined}>
       <Link href="/" className="nav-logo" aria-label="mathlon">
-        <Logo className="nav-mark" />
-        <span className="nav-wordmark">mathlon</span>
+        <LogoLockup size={26} className="nav-logo-lockup" />
       </Link>
 
       <input type="checkbox" id="nav-check" className="nav-check" />

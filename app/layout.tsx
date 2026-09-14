@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Caveat } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
-import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
 
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID || "";
@@ -48,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${caveat.variable}`}>
       <body suppressHydrationWarning>
-        <SmoothScroll>{children}</SmoothScroll>
+        {children}
         <Analytics />
         {GA4_ID && (
           <>
