@@ -16,7 +16,7 @@ const faqItems = [
   },
   {
     q: "Is it free to use?",
-    a: "Try Mathlon free first — a short guided demo, no credit card, no signup. If it clicks for you, Beta access is $7/month, locked in for as long as you stay subscribed. That price won't be this low once we're out of beta.",
+    a: "Try Mathlon free first with a 5-minute demo. No credit card, no sign-up. If it clicks for you, Beta access is $10/month, locked in for as long as you stay subscribed. That price won't be this low once we're out of beta.",
   },
   {
     q: "How does voice tutoring work?",
@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     q: "How do I get started?",
-    a: "Try the free demo below — pick a topic, open Mathlon in your browser, and hold space to ask your first question. No install, no signup for the demo. If you like it, join Beta afterward to keep going.",
+    a: "Try the free demo below. Type or paste your own problem, attach a photo of it, or pick one of ours, then talk it through. No install, no sign-up for the demo. If you like it, join the waitlist when it ends and we'll let you into Beta.",
   },
 ];
 
@@ -170,7 +170,7 @@ export default function Home() {
 
       <CtaSection
         heading={"Bring the problem<br/>that&apos;s been beating you"}
-        body="Try a free guided demo — no credit card, no signup. Like it? Join Beta for $7/month, locked in for life while we're still building."
+        body="Try a free 5-minute demo. No credit card, no sign-up. Like it? Join Beta for $10/month, locked in for as long as you stay subscribed."
       />
 
       <Footer />

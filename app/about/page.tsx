@@ -62,7 +62,7 @@ export default function AboutPage() {
 
       <CtaSection
         heading="Come learn with us"
-        body="Try a free 5-minute demo first. Like it? Join Beta for $7/month — founding price, locked in for life while we're still building."
+        body="Try a free 5-minute demo first. Like it? Join Beta for $10/month, a founding price locked in for as long as you stay subscribed."
       />
 
       <Footer />

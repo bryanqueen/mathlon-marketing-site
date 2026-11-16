@@ -95,7 +95,7 @@ export function Navbar() {
                   </svg>
                 </span>
                 <span className="nav-dropdown-label">Pricing</span>
-                <span className="nav-dropdown-desc">Free demo, then $7/month Beta</span>
+                <span className="nav-dropdown-desc">Free demo, then $10/month Beta</span>
               </Link>
             </div>
           </div>
