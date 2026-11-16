@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -21,6 +22,7 @@ const sections = [
           <li>Interfere with or disrupt the Service or its infrastructure.</li>
           <li>Share your account credentials with others.</li>
         </ul>
+        <p>Your use of the Service is also governed by our <Link href="/acceptable-use">Acceptable Use Policy</Link>, which bans sexual and NSFW content and other misuse.</p>
       </>
     ),
   },
